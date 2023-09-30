@@ -607,11 +607,6 @@ video {
   background-color: rgb(15 9 19 / var(--tw-bg-opacity));
 }
 
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-scale-down {
   -o-object-fit: scale-down;
      object-fit: scale-down;
@@ -755,10 +750,5 @@ video {
 @media (max-width: 593px) {
   .extrasmall\:overflow-auto {
     overflow: auto;
-  }
-
-  .extrasmall\:object-cover {
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
