@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        "jetbrains":["JetBrains Mono",'monospace']
+      },
+      screens:{
+        'extrasmall':{"max":'593px'},
+      }
+    },
   },
   plugins: [],
 }
