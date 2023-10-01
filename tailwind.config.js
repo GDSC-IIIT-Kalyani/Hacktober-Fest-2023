@@ -8,6 +8,7 @@ module.exports = {
       },
       screens:{
         'extrasmall':{"max":'593px'},
+        'exsm':{"max":'460px'},
       }
     },
   },
