@@ -1,6 +1,21 @@
 {
   "name": "hacktober-fest-2023",
   "version": "1.0.0",
+  "description": "# Build Instructions - enter ```npm run dev``` - open live server from ```index.html``` file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
+{
+  "name": "hacktober-fest-2023",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {

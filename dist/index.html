@@ -490,4 +490,104 @@
 
     <script src="index.js"></script>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <!-- add all the css links and font links here -->
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Hacktober Fest 2023</title>
+</head>
+<body class="font-jb h-screen">
+    <!-- Navbar  -->
+    <nav class="flex justify-between items-center width-[12%] mx-auto">
+        <div class="">
+            <img class="w-24 mx-20 my-20 " src="assests/hlogo.svg" alt="...">
+        </div>
+
+        <div class="nav-links duration-500 absolute md:static md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-9%] w-full flex items-center px-5">
+            <ul class="flex md:flex-row flex-col md:items-center text-white md:gap-[2vw] gap-14 text-2xl -mx-32">
+                <li>
+                    <a class="hover:text-yellow-400" href="#">About</a>
+                </li>
+                <li>
+                    <a class="hover:text-yellow-400" href="#">Leaderboard</a>
+                </li>
+                <li>
+                    <a class="hover:text-yellow-400" href="#">Projects</a>
+                </li>
+                <li>
+                    <a class="hover:text-yellow-400" href="#">Faq</a>
+                </li>
+            </ul>
+        </div>
+        <img class="absolute mx-60 w-auto " src="assests/navbar.svg" alt="">
+        <div class="flex items-center gap-6">
+            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer text-yellow-400 md:hidden"></ion-icon>
+        </div>
+    </nav>
+
+
+    <!-- Landing page -->
+    <section>
+        <div>
+            <img class="mx-auto w-85 h-30" src="assests/gdsc.svg" alt="">
+            <img class="mx-auto w-15 h-25" src="assests/hactober.svg" alt="">
+        </div>
+        <div class=" w-full text-white">
+            <p>GET IN THE REPO, HACKERS! //</p>
+            <p>IT’S TIME TO HACK //</p>
+            <p>LAUNCH SEQUENCE INITIATED//</p>
+        </div>
+    </section>
+
+
+    <!-- About page -->
+    <section>
+
+    </section>
+
+
+    <!-- Leaderboard -->
+    <section>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section>
+
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section>
+
+    </section>
+
+
+    <!-- Footer -->
+    <section>
+
+
+    </section>
+
+
+    <script src="index.js"></script>
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
 </html>

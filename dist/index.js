@@ -21,3 +21,6 @@ function faq() {
   }
 }
 document.addEventListener('DOMContentLoaded', faq);
+function ontogggleMenu(e) {
+    console.log(e)
+}
