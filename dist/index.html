@@ -509,22 +509,22 @@
     <!-- Navbar  -->
     <nav class="flex justify-between items-center width-[12%] mx-auto">
         <div class="">
-            <img class="w-24 mx-20 my-20 " src="assests/hlogo.svg" alt="...">
+            <img class="w-24 mx-20 my-16 " src="assests/hlogo.svg" alt="...">
         </div>
 
-        <div class="nav-links duration-500 absolute md:static md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-9%] w-full flex items-center px-5">
+        <div class="nav-links duration-500 absolute md:static md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5">
             <ul class="flex md:flex-row flex-col md:items-center text-white md:gap-[2vw] gap-14 text-2xl -mx-32">
                 <li>
-                    <a class="hover:text-yellow-400" href="#">About</a>
+                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">About</a>
                 </li>
                 <li>
-                    <a class="hover:text-yellow-400" href="#">Leaderboard</a>
+                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Leaderboard</a>
                 </li>
                 <li>
-                    <a class="hover:text-yellow-400" href="#">Projects</a>
+                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Projects</a>
                 </li>
                 <li>
-                    <a class="hover:text-yellow-400" href="#">Faq</a>
+                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Faq</a>
                 </li>
             </ul>
         </div>
@@ -538,10 +538,10 @@
     <!-- Landing page -->
     <section>
         <div>
-            <img class="mx-auto w-85 h-30" src="assests/gdsc.svg" alt="">
-            <img class="mx-auto w-15 h-25" src="assests/hactober.svg" alt="">
+            <img class="mx-auto w-25" src="assests/gdsc.svg" alt="">
+            <img class="mx-auto w-150 h-40" src="assests/hactober.svg" alt="">
         </div>
-        <div class=" w-full text-white">
+        <div class=" w-full text-white flex justify-between items-center text-2xl">
             <p>GET IN THE REPO, HACKERS! //</p>
             <p>IT’S TIME TO HACK //</p>
             <p>LAUNCH SEQUENCE INITIATED//</p>
@@ -582,12 +582,5 @@
 
 
     <script src="index.js"></script>
-    <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
-    </script>
 </body>
 </html>
