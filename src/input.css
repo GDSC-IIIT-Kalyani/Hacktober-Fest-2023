@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rotate180 {
+  transform: translateY(-50%) rotate(180deg);
+}
