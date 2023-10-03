@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='footer.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='assets/favicon/apple-icon-57x57.png') }}" />
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='assets/favicon/apple-icon-60x60.png') }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='assets/favicon/apple-icon-72x72.png') }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='assets/favicon/apple-icon-76x76.png') }}" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="{{ url_for('static', filename='assets/favicon/apple-icon-114x114.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{{ url_for('static', filename='assets/favicon/apple-icon-120x120.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="{{ url_for('static', filename='assets/favicon/apple-icon-114x114.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="{{ url_for('static', filename='assets/favicon/apple-icon-152x152.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='assets/favicon/apple-icon-180x180.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="{{ url_for('static', filename='assets/favicon/apple-icon-192x192.png') }}"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='assets/favicon/favicon-96x96.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon/favicon-16x16.png') }}" />
+    <link rel="manifest" href="{{ url_for('static', filename='assets/favicon/manifest.json') }}" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='assets/favicon/ms-icon-144x144.png') }}" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Hacktober-Leaderboard</title>
+    
+  </head>
+  
+  <!--Marquee binary digits on the navbar area-->
+  <body class="bg-[#170F1E]">
+    <nav class="navbar sticky overflow-y-hidden h-4" style="margin-top: 1%;">
+      <h1 class="text-white whitespace-nowrap overflow-x-hidden text-xs rbinary opacity-20" style="color: #fff;font-size: 1.25rem;">
+        00100100 00110001 00010100 00001110 00000111 00010100 00100010 00100001
+        00001011 00011010 00011101 00010001 00000111 00101000 00010110 00000011
+        00010011 00011010 00011101 00110010 00001111 00101011 00001100 00011010
+        00000010 00001000 00100110 00101011 00110010 00011101 11100100 00101101
+        11100100 00000001 00100001 00010110 00010001 00110000 00000011 00001111
+        00010100 00100101 00001010 00011100 00000001 00101111 00110010 00101001
+        00010110 00000100
+      </h1>
+    </nav>
+    
+    <!--GDSC IIIT Kalyani and Hacktober Fest logo-->
+    <div class="hero flex flex-col items-center justify-center">
+      <img class="w-[27rem] mt-[64px] gdsc md:w-[40rem]" src="{{ url_for('static', filename='assets/Group 1.svg') }}" alt="GDSC IIIT Kalyani logo" />
+      <img class="h-[20rem] w-[27rem] md:w-[35rem]" src="{{ url_for('static', filename='assets/Logo-2-Color 1.svg') }}" alt="hacktober-fest logo" />
+    </div>
+  
+    <!--Marquee slogan-->
+    <div class="relative flex overflow-x-hidden text-white">
+      <!--First line-->
+      <div class="animate-marquee whitespace-nowrap uppercase" style="font-family: 'JetBrains Mono'; font-weight: 500;">
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+      </div>
+  
+      <div class="absolute animate-marquee2 whitespace-nowrap text uppercase"
+        style="font-family: 'JetBrains Mono'; font-weight: 500;">
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Get in the repo, Hackers!</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+      </div>
+    </div>
+  
+    <!--Second Line-->
+    <div class="relative flex overflow-x-hidden text-white" style="font-family: 'JetBrains Mono'; font-weight: 500;">
+      <div class="animate-marqueeopp whitespace-nowrap uppercase">
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Launch Sequence initiated</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">It's time to hack</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Launch Sequence initiated</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">It's time to hack</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Launch Sequence initiated</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+      </div>
+  
+      <div class="absolute animate-marqueeopp2 whitespace-nowrap text uppercase">
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Launch Sequence initiated</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">It's time to hack</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Launch Sequence initiated</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">It's time to hack</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+  
+        <span class="text-5xl md:text-9xl font-JetBrains Mono font-500 mx-4">Launch Sequence initiated</span>
+        <span class="dot font-JetBrains Mono font-500 text-[5rem] md:text-[10rem]">•</span>
+      </div>
+    </div>
+  
+    <!--Hacktober leaderboard begins here-->
+    <div class="flex flex-col items-center justify-center my-[5rem]">
+      <img class="w-[24rem] md:w-[120rem]" src="{{ url_for('static', filename='assets/image 13.svg') }}" alt="margin-up" />
+      <img class="w-[23rem] md:w-[70rem]" src="{{ url_for('static', filename='assets/image 4.svg') }}" alt="leaderboard" />
+      <img class="w-[24rem] md:w-[120rem]" src="{{ url_for('static', filename='assets/image 13.svg') }}" alt="margin-down" />
+    </div>
+    
+    <!--Rankboard-->
+    {% for x in data["records"] %}
+      <div class="rank-board">
+        <div class="entry flex gap-[2rem] md:gap-[30rem] mt-[3rem]">
+          <h1 class="text-[30px] md:text-[60px] text-white">#{{ x.rank }}</h1>
+          <div class="h-[50px] w-[50px] md:h-[100px] md:w-[100px] bg-white rounded-lg">
+            <a href="{{ x.profilepage }}">
+              <img class="h-[50px] w-[50px] md:h-[100px] md:w-[100px] rounded-lg translate-y-2 translate-x-2"
+              src="{{ x.profileLink }}" alt="" />
+            </a>
+          </div>
+    
+          <div class="user">
+            <h2 class="username text-white md:text-[28px]">{{ x.username }}</h2>
+            <h3 class="full-name text-white text-[20px] md:text-[40px]">
+              {{x.full_name}}
+            </h3>
+    
+            <h4 class="text-white absolute right-[1rem] md:right-[7rem] points text-[20px] md:text-[28px] my-auto">
+              {{ x.points }}
+            </h4>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  
+    <img class="mb-8 h-[10px]" src="{{ url_for('static', filename='assets/Line 1.svg') }}" alt="line" />
+  
+    <!--Project section beigns here-->
+    <div class="projects flex flex-col mtb-[5rem] items-center justify-center">
+      <img class="w-[23rem] md:w-[50rem]" src="{{ url_for('static', filename='assets/image 11.svg') }}" alt="projects-banner" />
+      <img class="w-[24rem] md:w-[110rem]" src="{{ url_for('static', filename='assets/image 13.svg') }}" alt="fancy-seperator" />
+    </div>
+  
+    <!--Hacktober project cards-->
+    <div class="card">
+      <div class="column__StyledDiv-sc-rtwvj3-0 WeEZK">
+        
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM">  
+          <a href="https://github.com/GDSC-IIIT-Kalyani/hacktobot" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/hacktobot.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;"> 
+            <h1>Hacktobot</h1>
+          </div>
+          <div class="content">
+            <p>
+              An open-source Discord bot to introduce and encourage participants to contribute to open-source projects and familiarize them with the bot development environment during Hacktoberfest 2022.
+            </p>
+          </div>
+          </a>
+        </div>
+       
+  
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM"
+          style="background: linear-gradient(0deg, #7C7FFF 0%, #40DDFF 100%); border-color: #7C7FFF; ">
+          <a href="https://github.com/GDSC-IIIT-Kalyani/Doggo-run" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/shadow_dog.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;">
+            <h1>Doggo Run</h1>
+          </div>
+          <div class="content">
+            <p>
+              Infinite 2D side scroller game made with vanilla java script, uses parallax effects and sprite animation for better gaming experience. Contribute to this repo and flex your JavaScript skill.
+            </p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM">
+          <a href="https://github.com/GDSC-IIIT-Kalyani/Typing-Speed-Test" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/typeit.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;">
+            <h1>Type IT</h1>
+          </div>
+          <div class="content">
+            <p>
+              The faster you type, the faster you communicate with others. With our free typing speed test, you can check your WPM ,Learn keyboarding in the fun way. This is an Open source project to encourage contributions.
+            </p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM"
+          style="background: linear-gradient(0deg, #7C7FFF 0%, #40DDFF 100%); border-color: #7C7FFF; ">
+          <a href="https://github.com/GDSC-IIIT-Kalyani/react-star-match" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/react-star-match.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;">
+            <h1>React Star Match</h1>
+          </div>
+          <div class="content">
+            <p>
+              An open-source React project to improve your skills at hooks, components and state management. Contribute to this repo during Hacktoberfest 2022 and hone your React skills.
+            </p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM">
+          <a href="https://github.com/GDSC-IIIT-Kalyani/Plot" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/plot.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;">
+            <h1>Plot</h1>
+          </div>
+          <div class="content">
+            <p>
+              A simple open-source drawing app in HTML, CSS and vanilla JavaScript. Contribute to this repo during hacktoberfest '22 and improve your CSS and JavaScript skills.
+            </p>
+          </div>
+          </a>
+        </div>
+  
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM"
+          style="background: linear-gradient(0deg, #7C7FFF 0%, #40DDFF 100%); border-color: #7C7FFF; ">
+          <a href="https://github.com/GDSC-IIIT-Kalyani/Face-Recognition" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/face-recognition.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;">
+            <h1>Face Recognition</h1>
+          </div>
+          <div class="content">
+            <p>
+              An open-source face recognition based authentication system using python face-recognition library. Go through the project find issues and enjoy fixing them in Hacktoberfest 2022.
+            </p>
+          </div>
+          </a>
+        </div>
+
+        <div class="card__StyledDiv-sc-wz4vg9-0 card__MainWrapper-sc-wz4vg9-1 kEfnJk kydKZM">
+          <a href="https://github.com/GDSC-IIIT-Kalyani/hacktober-leaderboard" target="_blank">
+          <div class="heading">
+            <img src="{{ url_for('static', filename='assets/favicon/android-icon-96x96.png') }}" style="position: relative;
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                background: white;">
+            <h1>Hacktober Leaderboard</h1>
+          </div>
+          <div class="content">
+            <p>
+              Leaderboard for Hacktoberfest 2022. Contribute to this repo and fix the issues.
+            </p>
+          </div>
+          </a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+      <div class="container">
+        <div class="col">
+          <img class="h-[10rem] w-[10rem] md:w-[10rem]" src="{{ url_for('static', filename='assets/Logo-2-Color 1.svg') }}" alt="hacktober-fest logo" />
+        </div>
+        <div class="col">
+          <div class="custom-socials">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//hacktober-fest-leaderboard.herokuapp.com/" target="_blank" rel="nofollow noreferrer" class="custom-social facebook"><span class="fa fa-facebook-f"></span></a>
+            <a href="https://twitter.com/intent/tweet?text=Hacktoberfest%20is%20for%20everyone.%20Check%20out%20the%20leaderboard%20%0Ahttps%3A//hacktober-fest-leaderboard.herokuapp.com/" target="_blank" rel="nofollow noreferrer" class="custom-social twitter"><span class="fa fa-twitter"></span></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//hacktober-fest-leaderboard.herokuapp.com/&title=Hacktoberfest%20is%20for%20everyone&summary=Hacktoberfest%20is%20for%20everyone.%20Check%20out%20the%20leaderboard&source=" target="_blank" rel="nofollow noreferrer" class="custom-social linkedin"><span class="fa fa-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="custom-sub-footer">
+        <div class="container">
+          Copyright &copy; 2022 All rights reserved by<a href="https://github.com/paxF3E" target="_blank" rel="noreferrer nofollow">&nbsp;Pallav Saxena</a>.
+        </div>
+      </div>
+    </footer>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+  
+  </html>
