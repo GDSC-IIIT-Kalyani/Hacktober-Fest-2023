@@ -33,6 +33,7 @@ module.exports = {
         'extrasmall':{"max":'593px'},
         'exsm':{"max":'460px'},
         'verysmall':{'max':"475px"},
+        "640tk":{'max':"640px"},
       }
     },
   },
