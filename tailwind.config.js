@@ -26,9 +26,13 @@ module.exports = {
       fontFamily:{
         "jetbrains":["JetBrains Mono",'monospace']
       },
+      fontFamily:{
+        "jetbrains":["JetBrains Mono",'monospace']
+      },
       screens:{
         'extrasmall':{"max":'593px'},
         'exsm':{"max":'460px'},
+        'verysmall':{'max':"475px"},
       }
     },
   },
