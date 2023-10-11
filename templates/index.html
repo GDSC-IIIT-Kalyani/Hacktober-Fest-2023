@@ -97,6 +97,23 @@
            <div class="-mt-2"><img src="{{ url_for('static', filename='assets/13@1x 1.svg') }}" class="h-60 xs_lead:h-[100px] md_lead:h-40 sm_lead:h-40" alt=""></div>
        </div>
 
+
+       {% for x in data['records'] %}
+       <div class="flex flex-col w-1/2 m-auto xs_lead:w-[60%] ">
+        <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
+            <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#{{ x.rank }}</div>
+            <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
+                <img src="{{ x.profileLink }}" class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="Profile picture">
+                <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">{{ x.username }}</div>
+               <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "></div>
+            </div>
+            <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">{{ x.points }}</div>
+            
+        </div>
+
+       {% endfor %}
+<!--
+
        <div class="flex flex-col w-1/2 m-auto xs_lead:w-[60%] ">
            <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
                <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#1</div>
@@ -143,6 +160,8 @@
            </div>
 
        </div>    
+
+  -->
 
        <div class="mt-16 mx-auto pb-14 flex justify-center " >
            <img src="{{ url_for('static', filename='assets/Screenshot 2023-09-18 123007 1.svg') }}" class="w-4/5 xs:w-11/12" alt="">
