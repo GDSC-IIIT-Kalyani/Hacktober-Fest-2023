@@ -9,7 +9,6 @@ This repo contains the website code for the event Hacktober 23 conducted by GDSC
 - Maintain respect for other and proper decorem
 - PR/MR should be well written and detailed
 # Build Instructions
-- Enter ```npm install``` or ```npm i```
-- Enter
-```npm run dev```
-- open live server from ```index.html``` file
+- ```python -m venv .```
+- ```source bin/activate```
+- ```flask run```
