@@ -25,9 +25,7 @@ app = Flask(__name__)
 label_for_hacktober_2023 = "hacktoberfest"
 label_accepted_pull = "hacktoberfest-accepted"
 # timezone aware datetime object:
-
-event_starting_date = datetime(2022, 10, 1)
-
+event_starting_date = datetime(2023, 10, 1, 0, 0, 0, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
 levels = {"level-1" : 5, "level-2": 10, "level-3" : 20, "Level-1" : 5, "Level-2": 10, "Level-3" : 20}
 
@@ -68,9 +66,7 @@ def get_leaderboard():
                     score = v
             if score == 0:
                 continue
-
-            # print(pr.user.name, pr.user.login, pr.created_at, pr_labels, score)
-
+            print(pr.user.name, pr.user.login, pr.created_at, pr_labels, score)
             
             if pr.user.name in done_users:
                 for i in range(len(ranks)):
@@ -107,9 +103,7 @@ def get_leaderboard():
         user = {}
         rank+=1
 
-
     print(data)
-
     return data
 
 data = get_leaderboard()
