@@ -11,4 +11,6 @@ This repo contains the website code for the event Hacktober 23 conducted by GDSC
 # Build Instructions
 - ```python -m venv .```
 - ```source bin/activate```
+- ```pip install -r requirements.txt```
+- Create a .env file to store the github-token. Use a read-only fine grained access token.
 - ```flask run```
