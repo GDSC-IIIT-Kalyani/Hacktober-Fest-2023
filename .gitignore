@@ -7,3 +7,4 @@ lib64
 include/
 pyvenv.cfg
 Scripts/
+.vercel
