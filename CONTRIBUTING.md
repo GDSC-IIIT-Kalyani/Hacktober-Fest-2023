@@ -76,4 +76,47 @@ To maintain consistency and readability in the codebase, please adhere to the fo
 
 ### Code of Conduct
 
+
+#### Introduction
+
+Our community is dedicated to providing a harassment-free experience for everyone, regardless of age, gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, national origin, religion, or technology choices. We do not tolerate harassment of community members in any form.
+
+This code of conduct applies to all community spaces, both online and offline, including our website, forums, social media, meetups, and events. Anyone who violates this code of conduct may be sanctioned or expelled from these spaces at the discretion of the community organizers.
+
+#### Expected Behavior
+
+- Be respectful and considerate of others.
+- Be welcoming and inclusive.
+- Be mindful of your words and actions and their impact on others.
+- Encourage and support each other.
+- Use welcoming and inclusive language.
+
+#### Unacceptable Behavior
+
+Harassment and unacceptable behavior include, but are not limited to:
+
+- Offensive comments related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, ethnicity, national origin, religion, or technology choices.
+- Unwanted advances or attention.
+- Encouraging self-harm or harm to others.
+- Threats or incitement of violence towards any individual or group.
+- Deliberate intimidation.
+- Inappropriate photography or recording.
+- Sustained disruption of events, forums, or meetings.
+- Other conduct that is offensive, disrespectful, or creates an unsafe environment.
+
+#### Consequences of Unacceptable Behavior
+
+Unacceptable behavior from any community member will not be tolerated. Anyone asked to stop unacceptable behavior is expected to comply immediately. If a community member engages in unacceptable behavior, the community organizers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the community without warning.
+
+#### Reporting Guidelines
+
+If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible. You can contact us through our offical [Discord](https://discord.gg/DU57jsSYyM) or contact the maintainers. All reports will be kept confidential.
+
+## Credits
+
+This Code of Conduct is based on the [original Hacktoberfest Code of Conduct](https://hacktoberfest.digitalocean.com/resources/code-of-conduct), which is open source and released under the [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/).
+
+
+
+
 # GDSC IIIT Kalyani Hacktoberfest Code of Conduct
