@@ -11,21 +11,126 @@
     <title>Hacktober Fest 2023</title>
 </head>
 <body class="font-jetbrains h-screen bg-[#0F0913]">
+  
+  <section class="landing-page  640tk:mx-6 mx-10 mt-2">
+    <nav class="">
+       <div class="max-w-screen-xl flex flex-wrap items-center  md:justify-between justify-between mx-auto pt-4">
+         <a href="#" class="flex items-center">
+             <img src="{{ url_for('static', filename='assets/navlogo.svg') }}" class=" 640tk:h-16  md:h-20  xl:h-35 lg:h-30 mr-3" alt="Hacktober-Fest Logo" />
+             
+         </a>
+         <div class="md:hidden flex items-center">
+          <button  type="button" class= " mobile-menu-button  inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#F9CB33] rounded-lg md:hidden hover:bg-black focus:outline-none focus:ring-2 focus:ring-[#F9CB33] " aria-controls="navbar-default" aria-expanded="false">
+             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+             </svg>
+         </button>
+       </div>
+         <div class="hidden md:flex basis-1/2 items-center space-x-1">
+           
+  
+           <div class="  md:w-[35rem]    lg:w-[49rem] relative">
+           <img src="{{ url_for('static', filename='assets/navrect.svg') }}" alt="">
+           <div class="absolute bottom-0 px-4 py-3 lg:pb-5 md:pb-3 w-full">
+             <a  class="text-white  md:text-2xl  md:px-3             lg:px-5  lg:text-3xl "  href="#">About</a>
+             <a  class="text-white  md:text-2xl  md:px-3            lg:px-5 lg:text-3xl"    href="#">Leaderboard</a>
+             <a  class="text-white  md:text-2xl  md:px-3           lg:px-5  lg:text-3xl"    href="#">Projects</a>
+             <a  class="text-white  md:text-2xl  md:px-3            lg:px-5   lg:text-3xl"   href="#">Faq</a>
+          </div>
+ </div>
+         </div>
+    </div>
+    <div class="hidden mt-3 mobile-menu bg-[#0F0913] w-full px-2  rounded-md  border-t-[#0F0913]   shadow-[0_0.3rem_0.2rem_0_rgba(249,203,51,1)]">
+       <ul class="">
+          <li class="active"><a href="index.html" class="block text-sm  text-white  font-semibold">About</a></li>
+          <li><a href="#services" class="block text-sm text-white transition duration-700">Leaderboard</a></li>
+          <li><a href="#about" class="block text-sm  text-white transition duration-700">Projects</a></li>
+          <li><a href="#contact" class="block text-sm  text-white transition duration-700">Faq</a></li>
+       </ul>
+    </div>
+       <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+ 
+          btn.addEventListener("click", () => {
+             menu.classList.toggle("hidden");
+          });
+       </script>
+    </nav>
+ </section>
+ <!-- Landing Page -->
+ 
+ <section class="landing-page  mt-16 640tk:mx-2 ">
+    <div class=" flex flex-col justify-center items-center gap-10">
+    <div class="450tk:w-[20rem] 640tk:w-[26rem]   sm:w-[30rem]  md:w-[35rem] lg:w-[40rem]  xl:w-[50rem] ">
+       <img   src="{{ url_for('static', filename='assets/hacktoberlogo.svg') }}" alt="">
+    </div>
+    <div class=" 450tk:w-[20rem] 640tk:w-[26rem]   sm:w-[30rem] md:w-[35rem]  lg:w-[40rem] xl:w-[50rem] ">
+       <img   src="{{ url_for('static', filename='assets/gdsclogo.svg') }}" alt="">
+    </div>
+    <h1 class="640tk:text-lg text-center   md:text-3xl text-[#ABB3C0]">In Collaboartion With</h1>
+    </div>
+    <!-- collborator cards -->
+    <!-- <div class="flex gap-16 flex-wrap justify-center mt-8 ">
+       <div class="h-[8rem] w-[20rem] rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+       </div>
+         <div class="h-[8rem] w-[20rem] rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+       </div>
+         <div class="h-[8rem] w-[20rem] rounded-tr-3xl  rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+       </div> 
+     </div> -->
+     
+     <!-- collborators -->
+     <div class="relative flex overflow-x-hidden mt-10">
+       <div class="py-12 animate-marquee3 whitespace-nowrap">
+          <div class=" inline-block  h-[8rem] w-[20rem] mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+          <div class=" inline-block h-[8rem] w-[20rem]  mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+          <div class=" inline-block h-[8rem] w-[20rem]  mx-4   rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+          <div class=" inline-block h-[8rem] w-[20rem]  mx-4   rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+ 
+       </div>
+      
+     
+       <div class="absolute top-0 py-12 animate-marquee4 whitespace-nowrap">
+          <div class=" inline-block  h-[8rem] w-[20rem]  mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+          <div class=" inline-block h-[8rem] w-[20rem]  mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+          <div class=" inline-block h-[8rem] w-[20rem]  mx-4   rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+          <div class=" inline-block h-[8rem] w-[20rem]  mx-4   rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
+          </div>
+       </div>
+     </div>
+      <!-- marquee effect -->
     
+     <div class="relative flex overflow-x-hidden mt-10">
+       <div class="py-12 animate-marquee whitespace-nowrap">
+         <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
+          <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
+         <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">LAUNCH SEQUENCE INITIATED//</span>
+       </div>
+     
+       <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+          <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
+           <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
+           <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">LAUNCH SEQUENCE INITIATED//</span>
+       
+       </div>
+     </div>
+     
+     
+    
+   
+ 
+ </section> 
 
 
-    <!-- Landing page -->
-    <section>
-        <div>
-            <img class="mx-auto w-85 h-30" src="{{ url_for('static', filename='assets/gdsc.svg') }}" alt="">
-            <img class="mx-auto w-15 h-25" src="{{ url_for('static', filename='assets/hactober.svg') }}" alt="">
-        </div>
-        <div class=" w-full flex justify-between items-center text-2xl text-white p-16">
-            <p>GET IN THE REPO, HACKERS! //</p>
-            <p>IT’S TIME TO HACK //</p>
-            <p>LAUNCH SEQUENCE INITIATED//</p>
-        </div>
-    </section>
+    
     <!-- About page -->
 
     
@@ -68,7 +173,7 @@
     <section class="text-[#fff]  w-[100vw] bg-[#0F0913] font-jet_brains " >
       <div class="flex justify-center gap-x-[5%]">
            <div class="text-6xl font-semibold tracking-wide mt-20 mb-4 xs_lead:text-3xl xs_lead:mt-10 sm_lead:text-4xl md_lead:text-4xl">LEADERBOARD</div>
-           <div class="-mt-2"><img src="{{ url_for('static', filename='assets/13@1x 1.svg') }}" class="h-60 xs_lead:h-[100px] md_lead:h-40 sm_lead:h-40" alt=""></div>
+           <div class="-mt-2"><img src="{{ url_for('static', filename='assets/13@1x 1.svg') }}" class="h-32 xs_lead:h-[100px] md_lead:h-40 sm_lead:h-40" alt=""></div>
        </div>
 
 
