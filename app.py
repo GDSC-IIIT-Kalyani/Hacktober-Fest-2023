@@ -60,28 +60,26 @@ def get_leaderboard():
     pulls = repo.get_pulls(state='closed', sort="created", direction='desc')   # getting all the closed pull requests
     for pr in pulls:
         pr_labels = [label.name for label in pr.labels]
-        if pr.created_at > event_starting_date and label_accepted_pull in pr_labels:
-            # print(pr.user.name, pr.user.login, pr.created_at, pr_labels)
-            score = 0
-            for k, v in levels.items():   # calculating score from the level dictionary
-                if k in pr_labels:
-                    score = v
-            if score == 0:
-                continue
+        if pr.created_at > event_starting_date:
+            if label_accepted_pull in pr_labels:
+                score = 0
+                for k, v in levels.items():   # calculating score from the level dictionary
+                    if k in pr_labels:
+                        score = v
+                if score == 0:
+                    continue
 
-            # print(pr.user.name, pr.user.login, pr.created_at, pr_labels, score)
-
-            
-            if pr.user.name in done_users:
-                for i in range(len(ranks)):
-                    if ranks[i][0] == pr.user.name:
-                        ranks[i][1] += (-score)
-                        break
-            else:
-                # Making a nested list (ranks):
-                # ranks = [['uname', '-score', 'img_url', 'first_pull_req_date&time'], ...] (-score would be taken care of later)
-                ranks.append([pr.user.name, -score, "https://github.com/"+pr.user.login+".png", pr.user.login, pr.created_at])
-                done_users.append(pr.user.name)
+                # print(pr.user.name, pr.user.login, pr.created_at, pr_labels, score)
+                if pr.user.name in done_users:
+                    for i in range(len(ranks)):
+                        if ranks[i][0] == pr.user.name:
+                            ranks[i][1] += (-score)
+                            break
+                else:
+                    # Making a nested list (ranks):
+                    # ranks = [['uname', '-score', 'img_url', 'first_pull_req_date&time'], ...] (-score would be taken care of later)
+                    ranks.append([pr.user.name, -score, "https://github.com/"+pr.user.login+".png", pr.user.login, pr.created_at])
+                    done_users.append(pr.user.name)
         else:
             break
 
