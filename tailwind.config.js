@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.{html,js}"],
+  content: ["./templates/*.{html,js}"],
   theme: {
     extend: {
+      
       flex: {
         '6': '6',
         '3': '3',
@@ -19,21 +20,31 @@ module.exports = {
       '9/10':"90%"
     },
     boxShadow:{
-      custom:" 0 0 1px 1px #FFFBA4"},
-    fontFamily:{
-      Jetbrains: ['JetBrains Mono', 'monospace']
+      custom:" 0 0 1px 1px #FFFBA4",
+      'custom1': '9px 9px 3px #ffff',
+      'custom2': '3px 3px 3px #ffff',
     },
-      fontFamily:{
-        "jetbrains":["JetBrains Mono",'monospace']
-      },
-      fontFamily:{
-        "jetbrains":["JetBrains Mono",'monospace']
-      },
+      
+    fontFamily:{
+      Jetbrains: ['JetBrains Mono', 'monospace'],
+      "jetbrains":["JetBrains Mono",'monospace'],
+      'jet_brains' : ['JetBrains Mono'],
+    },
+      // fontFamily:{
+        
+      // },
+      // fontFamily: {
+        
+      // },
       screens:{
         'extrasmall':{"max":'593px'},
         'exsm':{"max":'460px'},
         'verysmall':{'max':"475px"},
         "640tk":{'max':"640px"},
+        'sm_lead': {'max': '767px'},
+      'md_lead': { 'max': '1023px'},
+      'xs_lead': { 'max': '639px'},
+      'xl_lead': { 'max': '1700px'},
       }
     },
   },

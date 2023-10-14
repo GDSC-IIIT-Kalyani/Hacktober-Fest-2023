@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <!-- add all the css links and font links here -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -11,40 +11,42 @@
     <title>Hacktober Fest 2023</title>
 </head>
 <body class="font-jetbrains h-screen bg-[#0F0913]">
+
     <!-- Navbar  -->
     <nav class="flex justify-between items-center width-[12%] mx-auto">
-        <div class="">
-            <img class="w-24 mx-20 my-20 " src="assets/hlogo.svg" alt="...">
-        </div>
+      <div class="">
+          <img class="w-24 mx-20 my-20 " src="assets/hlogo.svg" alt="...">
+      </div>
 
-        <div class="nav-links duration-500 absolute md:static md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5">
-            <ul class="flex md:flex-row flex-col md:items-center text-white md:gap-[2vw] gap-14 text-2xl -mx-32">
-                <li>
-                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">About</a>
-                </li>
-                <li>
-                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Leaderboard</a>
-                </li>
-                <li>
-                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Projects</a>
-                </li>
-                <li>
-                    <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Faq</a>
-                </li>
-            </ul>
-        </div>
-        <img class="absolute mx-60 w-auto " src="assets/navbar.svg" alt="">
-        <div class="flex items-center gap-6">
-            <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer text-yellow-400 md:hidden"></ion-icon>
-        </div>
-    </nav>
+      <div class="nav-links duration-500 absolute md:static md:min-h-fit md:w-auto min-h-[60vh] left-0 top-[-100%] w-full flex items-center px-5">
+          <ul class="flex md:flex-row flex-col md:items-center text-white md:gap-[2vw] gap-14 text-2xl -mx-32">
+              <li>
+                  <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">About</a>
+              </li>
+              <li>
+                  <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Leaderboard</a>
+              </li>
+              <li>
+                  <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Projects</a>
+              </li>
+              <li>
+                  <a class="text-white opacity-90 hover:text-yellow-400 duration-300" href="#">Faq</a>
+              </li>
+          </ul>
+      </div>
+      <img class="absolute mx-60 w-auto " src="assets/navbar.svg" alt="">
+      <div class="flex items-center gap-6">
+          <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer text-yellow-400 md:hidden"></ion-icon>
+      </div>
+  </nav>
+    
 
 
     <!-- Landing page -->
     <section>
         <div>
-            <img class="mx-auto w-85 h-30" src="assets/gdsc.svg" alt="">
-            <img class="mx-auto w-15 h-25" src="assets/hactober.svg" alt="">
+            <img class="mx-auto w-85 h-30" src="{{ url_for('static', filename='assets/gdsc.svg') }}" alt="">
+            <img class="mx-auto w-15 h-25" src="{{ url_for('static', filename='assets/hactober.svg') }}" alt="">
         </div>
         <div class=" w-full flex justify-between items-center text-2xl text-white p-16">
             <p>GET IN THE REPO, HACKERS! //</p>
@@ -55,35 +57,121 @@
     <!-- About page -->
 
     
-    <section  id="aboutus" class=" ml-3 mt-10 mr-3 font-jetbrains text-3xl max-w-0">
-      <div class="">
-   
-      <div class=" md:mx-16 m-4 flex md:flex-row md:justify-center md:h-[35rem] md:gap-3  md:flex-wrap-3 flex-col">
-        <div class=" w-full md:w-2/4 m-2 md:h-[28rem] h-56 text-center flex md:flex-col flex-row sm:justify-center">
-           <div class="sm:ml-8 extrasmall:m-6">
-              <h1 class="text-white pt-10 sm:mt-9 extrasmall:text-4xl font-bold mt-9 md:pt-0 md:m-2  tracking-widest  2xl:text-6xl md:text-5xl lg:mt-3 xl:text-6xl">ABOUT</h1> 
-            
-           </div>
-  
-  
-              <img   class="object-stretch exsm:object-stretch extrasmall:h-70 w-70 extrasmall:overflow-auto sm:h-60 sm:ml-10 sm:w-60 md:mt-12 md:h-full md:w-full  md:ml-6 xl:h-full" src="assets/aboutme.svg" alt="#">
-            
-      
-      
-        </div>
-      
-        <div class="border-t-4 border-dashed opacity-60 h-1  m-2  md:h-[22rem] md:mt-20 lg:h-[22rem]  xl:h-[24rem] lg:mt-20   w-full   text-center md:w-1 md:border-l-4 md:border-dashed xl:mt-20 2xl:mt-14 "></div>
-        <div class=" md:w-2/4 m-2 mt-10 md:ml-4  md:h-[28rem] h-80 w-full text-lg 2xl:text-3xl xl:text-3xl overflow-auto lg:text-2xl  text-white text-left"><div class="md:mt-20 xl:mt-12 2xl:mt-16 w-full">Hacktoberfest is DigitalOcean's annual event that encourages people to contribute to open source throughout October. Much of modern tech infrastructure including some of DigitalOcean's own products relies on open-source projects</div>
-        </div>
-      </div> 
+    <section  id="aboutus" class=" ml-3 mt-10 font-jetbrains text-3xl">
+        <div class="sm:mr-6 extrasmall:mr-8">
+     
+        <div class=" md:mx-16 m-4 mr-3 flex md:flex-row  md:justify-around md:h-[35rem]  md:gap-3  md:flex-wrap-3 flex-col">
+          <div class=" w-full md:w-2/4 m-2 md:h-[28rem] h-56   text-center flex md:flex-col flex-row sm:justify-center">
+             <div class="md:ml-8 exsm:w-40">
+                <h1 class="text-white pt-10   sm:mt-9 extrasmall:mt-11 exsm:text-xl  mt-3 md:pt-0 md:m-2  tracking-widest  2xl:text-6xl  lg:text-5xl xl:text-5xl extrasmall:ml-12 ">ABOUT</h1> 
+              
+             </div>
+
+
+             <img   class="object-stretch extrasmall:object-stretch extrasmall:h-70 extrasmall:w-70 extrasmall:overflow-auto  sm:h-60 sm:ml-10 sm:w-60 md:h-full md:w-full  md:ml-6" src="{{ url_for('static', filename='assets/aboutme.svg') }}" alt="">
+              
+        
+        
+          </div>
+        
+          <div class="border-t-4 border-dashed opacity-60 h-1  m-2  md:h-[22rem] md:mt-20 lg:h-[22rem]  xl:h-[24rem] lg:mt-20   w-full   text-center md:w-1 md:border-l-4 md:border-dashed xl:mt-20 2xl:mt-14 "></div>
+          <div class=" md:w-2/4 m-2 mt-10 md:ml-4  md:h-[28rem] h-80 w-full font-medium text-lg 2xl:text-3xl xl:text-3xl overflow-auto lg:text-2xl  text-white text-left"><div class="md:mt-20 xl:mt-12 2xl:mt-16 w-full">Hacktoberfest is DigitalOcean's annual event that encourages people to contribute to open source throughout October. Much of modern tech infrastructure including some of DigitalOcean's own products relies on open-source projects</div>
+          </div>
+        </div> 
 
         <div class="  md:mx-16  mr-3 flex md:flex-row  md:justify-around   md:gap-3  md:flex-wrap-3 flex-col">
-            <img class="object-scale-down" src="assets/aboutdesign.svg" alt="">
+            <img class="object-scale-down" src="{{ url_for('static', filename='assets/aboutdesign.svg') }}" alt="">
            </div> 
         </div>
         
     </section>
- 
+     
+        
+      
+
+
+
+
+    <!-- Leaderboard -->
+    <section class="text-[#fff]  w-[100vw] bg-[#0F0913] font-jet_brains " >
+      <div class="flex justify-center gap-x-[5%]">
+           <div class="text-6xl font-semibold tracking-wide mt-20 mb-4 xs_lead:text-3xl xs_lead:mt-10 sm_lead:text-4xl md_lead:text-4xl">LEADERBOARD</div>
+           <div class="-mt-2"><img src="{{ url_for('static', filename='assets/13@1x 1.svg') }}" class="h-60 xs_lead:h-[100px] md_lead:h-40 sm_lead:h-40" alt=""></div>
+       </div>
+
+
+       {% for x in data['records'] %}
+       <div class="flex flex-col w-1/2 m-auto xs_lead:w-[60%] ">
+        <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
+            <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#{{ x.rank }}</div>
+            <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
+                <img src="{{ x.profileLink }}" class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="Profile picture">
+                <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">{{ x.username }}</div>
+               <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "></div>
+            </div>
+            <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">{{ x.points }}</div>
+            
+        </div>
+
+       {% endfor %}
+<!--
+
+       <div class="flex flex-col w-1/2 m-auto xs_lead:w-[60%] ">
+           <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
+               <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#1</div>
+               <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
+                   <img src="{{ url_for('static', filename='assets/Line 36.svg') }}" class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="">
+                   <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">github.io</div>
+                  <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "></div>
+               </div>
+               <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">50</div>
+               
+           </div>
+
+           <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
+               <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#1</div>
+               <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
+                   <img src="{{ url_for('static', filename='assets/Line 36.svg') }}" class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="">
+                   <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">github.io</div>
+                  <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "></div>
+               </div>
+               <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">50</div>
+               
+           </div>
+
+           <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
+               <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#1</div>
+               <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
+                   <img src="{{ url_for('static', filename='assets/Line 36.svg') }}" class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="">
+                   <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">github.io</div>
+                  <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "></div>
+               </div>
+               <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">50</div>
+               
+           </div>
+
+           <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
+               <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#1</div>
+               <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
+                   <img src="{{ url_for('static', filename='assets/Line 36.svg') }}" class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="">
+                   <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">github.io</div>
+                  <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "></div>
+               </div>
+               <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">50</div>
+               
+           </div>
+
+       </div>    
+
+  -->
+
+       <div class="mt-16 mx-auto pb-14 flex justify-center " >
+           <img src="{{ url_for('static', filename='assets/Screenshot 2023-09-18 123007 1.svg') }}" class="w-4/5 xs:w-11/12" alt="">
+       </div>
+   </section>
+
+
+    <!-- Projects -->
       <!-- Projects -->
   <section  id="projects" class="    lg:mx-4 xl:m-10 2xl:m-32  mt-10 font-jetbrains text-3xl ">
     
@@ -95,7 +183,7 @@
       
            <div
               class="   verysmall:hidden  w-[12rem] h-[10rem]  md:w-[14rem] md:h-[14rem]  xl:w-[16rem] xl:h-[18rem]   text-white ">
-              <img   src="assets/projectsectionimg.svg" alt="" srcset="">
+              <img   src="{{ url_for('static', filename='assets/projectsectionimg.svg') }}" alt="" srcset="">
               
           </div>
       
@@ -111,7 +199,7 @@
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16  lg:w-20 lg:h-20 mr-3 inline-flex items-center justify-center  text-white flex-shrink-0">
-                    <img src="./assets/hacktobot 2.svg" alt="" srcset="">
+                    <img src="{{ url_for('static', filename='assets/hacktobot 2.svg') }}" alt="" srcset="">
                     
                  </div>
                   <h2 class="text-white text-3xl verysmall:text-2xl xl:text-4xl lg:text-2xl font-semibold tracking-wider" >HACKTOBOT</h2>
@@ -137,7 +225,7 @@
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16 mr-3 lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
-                    <img src="./assets/hacktobot 2.svg" alt="" srcset="">
+                    <img src="{{ url_for('static', filename='assets/hacktobot 2.svg') }}" alt="" srcset="">
                     
                  </div>
                   <h2 class="text-white text-3xl  verysmall:text-2xl font-semibold tracking-wider xl:text-4xl lg:text-2xl" >HACKTOBOT</h2>
@@ -159,7 +247,7 @@
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16 mr-3  lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
-                    <img src="./assets/hacktobot 2.svg" alt="" srcset="">
+                    <img src="{{ url_for('static', filename='assets/hacktobot 2.svg') }}" alt="" srcset="">
                     
                  </div>
                   <h2 class="text-white text-3xl  font-semibold tracking-wider verysmall:text-2xl xl:text-4xl lg:text-2xl" >HACKTOBOT</h2>
@@ -181,7 +269,7 @@
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16 mr-3 lg:w-20 lg:h-20  inline-flex items-center justify-center  text-white flex-shrink-0">
-                    <img src="./assets/hacktobot 2.svg" alt="" srcset="">
+                    <img src="{{ url_for('static', filename='assets/hacktobot 2.svg') }}" alt="" srcset="">
                     
                  </div>
                   <h2 class="text-white text-3xl  font-semibold tracking-wider verysmall:text-2xl  xl:text-4xl lg:text-2xl" >HACKTOBOT</h2>
@@ -203,7 +291,7 @@
         <div class="flex items-center mb-3">
             <div
                class="w-16 h-16 mr-3  lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
-               <img src="./assets/hacktobot 2.svg" alt="" srcset="">
+                    <img src="{{ url_for('static', filename='assets/hacktobot 2.svg') }}" alt="" srcset="">
                
             </div>
              <h2 class="text-white text-3xl  font-semibold tracking-wider verysmall:text-2xl xl:text-4xl lg:text-2xl" >HACKTOBOT</h2>
@@ -225,7 +313,7 @@
         <div class="flex items-center mb-3">
             <div
                class="w-16 h-16 mr-3 lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
-               <img src="./assets/hacktobot 2.svg" alt="" srcset="">
+               <img src="{{ url_for('static', filename='assets/hacktobot 2.svg') }}" alt="" srcset="">
                
             </div>
              <h2 class="text-white text-3xl  font-semibold tracking-wider verysmall:text-2xl xl:text-4xl lg:text-2xl" >HACKTOBOT</h2>
@@ -247,7 +335,7 @@
         
 </div>
 <div class="  md:mx-2  mt-20 mr-3 flex md:flex-row  md:justify-around   md:gap-3  md:flex-wrap-3 flex-col">
-    <img class="object-contain" src="assets/aboutdesign.svg" alt="">
+    <img class="object-contain" src="{{ url_for('static', filename='assets/aboutdesign.svg') }}" alt="">
    </div> 
 </div>
 
@@ -262,12 +350,12 @@
         <div class="imgs flex justify-center m-auto">
           <img
             class="faqimg h-[25px] sm:h-[40px] mt-[40px] md:h-[50px] md:mt-[70px] items-center sm:mt-[60px] mr-[2%]"
-            src="assets/FAQ.svg"
+            src="{{ url_for('static', filename='assets/FAQ.svg') }}"
             alt=""
           />
           <img
             class="xyz h-[120px] sm:h-[200px] md:h-[230px] ml-[2%]"
-            src="assets/05@1x1.svg"
+            src="{{ url_for('static', filename='assets/05@1x1.svg') }}"
             alt=""
           />
         </div>
@@ -283,7 +371,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -309,7 +397,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -334,7 +422,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -360,7 +448,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -382,7 +470,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -403,7 +491,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -425,7 +513,7 @@
             <div class="arr pl-0">
               <img
                 class="arrow pl-0 h-4 w-7 sm:w-7 md:w-10 lg:h-5 lg:w-12 absolute right-[10px] top-[22%] mt-[2%] md:mt-[1.2%] sm:mt-[1%] -translate-y-2/4 duration-300"
-                src="assets/ss1.svg"
+                src="{{ url_for('static', filename='assets/ss1.svg') }}"
                 alt=""
               />
             </div>
@@ -438,7 +526,7 @@
 
         <div class="ml-[6%] w-[87%] sm:mt-[50px] mt-[40px]">
           <img
-            src="assets/ss4.svg"
+          src="{{ url_for('static', filename='assets/ss4.svg') }}"
             alt=""
           />
         </div>
@@ -456,7 +544,7 @@
         
              <div
                 class="   verysmall:hidden  w-[12rem] h-[10rem]  sm:w-[13rem] sm:h-[13rem] md:w-[14rem] md:h-[14rem]  xl:w-[16rem] xl:h-[18rem]   text-white ">
-                <img   src="assets/ourteamlogo.svg" alt="" srcset="">
+                 <img   src="{{ url_for('static', filename='assets/ourteamlogo.svg') }}" alt="" srcset="">
                 
             </div>
         
@@ -576,77 +664,76 @@
     </div>
     </div>
     <div class="  md:mx-2  mt-20 mr-3 flex md:flex-row  md:justify-around   md:gap-3  md:flex-wrap-3 flex-col">
-      <img class="object-contain" src="assets/aboutdesign.svg" alt="">
+        <img class="object-contain" src="{{ url_for('static', filename='assets/aboutdesign.svg') }}" alt="">
      </div> 
     </div>
       
     </section>
-    
 
-     <!-- Footer   -->
+    <!--footer-->
     <section class="text-white font-Jetbrains font-500">
-      <div class="cont2 ml-[9%] mt-[8%] w-[80%] h-[90%] relative">
+      <div class="cont2 ml-[7%] xl:ml-[9%] mt-[5%] xl:mt-[8%] w-[85%] xl:w-[80%] xl:h-[90%] relative">
         <div
-          class="container w-[100%] h-[90%] mt-15px absolute z-1 flex flex-row"
+          class="container w-[90%] sm:w-[95%] md:w-[95%] lg:w-[95%] xl:w-[100%] h-[85%] xl:h-[90%] mt-[15px] sm:mt-[20px] md:mt-[20px] lg:mt-[30px] xl:mt-[15px] absolute z-1 flex flex-row"
         >
-          <div class="div-side1 flex-6 p-[10px] m-[5px] text-center">
-            <div class="flex flex-row pt-[60px]">
-              <div class="ml-[50px]">
+          <div class="div-side1 flex-6 xl:p-[10px] xl:m-[5px] text-center">
+            <div class="flex flex-row xl:pt-[60px] sm:pt-[20px] md:pt-[20px] lg:pt-[30px] pt-[10px]">
+              <div class="px-[5px] ml-[12px] sm:ml-[30px] md:ml-[50px] lg:ml-[30px] xl:ml-[50px] sm:mt-[10px] md:mt-[30px] lg:mt-[30px] xl:mt-[5px]">
                 <img
-                  class="w-[140px]"
-                  src="assets/hf10_icon_fcd_rgb_2.svg"
+                  class="w-[101px] sm:w-[100px] md:w-[110px] lg:w-[110px] xl:w-[140px]"
+                  src="{{ url_for('static', filename='assets/hf10_icon_fcd_rgb_2.svg') }}"
                   alt=""
                 />
               </div>
-              <div class="mt-6 ml-[10%]">
+              <div class="px-[5px] mt-[8px] sm:mt-[30px] md:mt-[50px] lg:mt-[40px] xl:mt-6 xl:ml-[10%]">
                 <img
-                  class="w-[130px]"
-                  src="assets/image1.svg"
+                  class="w-[90px] sm:w-[80px] md:w-[90px] lg:w-[100px] xl:w-[130px]"
+                  src="{{ url_for('static', filename='assets/image1.svg') }}"
                   alt=""
                 />
               </div>
             </div>
             <div
-              class="mt-[10%] text-center mb-100px w-[300px] ml-[16%] text-[20px] text-[#C3BCC3]"
+              class="mt-[8px] sm:mt-[8px] md:mt-[10px] lg:mt-[20px] xl:mt-[10%] text-center mb-[20px] xl:mb-100px xl:w-[300px] sm:w-[230px] md:w-[230px] lg:w-[230px] ml-[20px] sm:ml-[60px] md:ml-[70px] lg:ml-[50px] xl:ml-[16%] text-[6px] sm:text-[12px] md:text-[12px] lg:text-[15px] xl:text-[20px] text-[#C3BCC3]"
             >
               <p>© 2023 DIGITALOCEAN, LLC.ALL RIGHTS RESERVED.</p>
             </div>
           </div>
 
-          <div class="div-side2 flex-3 p-[10px] m-[5px]">
-            <div class="ml-[20px]">
-              <h1 class="text-3xl font-bold mt-[50px] mb-[5%]">SHARE</h1>
+          <div class="div-side2 flex-3 p-[10x] xl:p-[30px] m-[5px] xl:m-[5px] xl:ml-[40px]">
+            <div class="sm:ml-[0px] ml-[20px]">
+              <h1 class="text-[14px] sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl font-bold mt-[5px] sm:mt-[30px] md:mt-[50px] lg:mt-[50px] xl:mt-[50px] sm:mb-[5px] md:mb-[10px] lg:mb-[10px] xl:mb-[5%] xl:ml-[40px]">SHARE</h1>
               <div
-                class="border-b-2 border-dashed w-[140px] mb-[25px] border-[#C3BCC3]"
+                class="xl:border-b-2 border-b-[1px] border-dashed w-[60px] sm:w-[100px] md:w-[100px] lg:w-[100px] xl:w-[140px] mb-[5px] sm:mb-[10px] md:mb-[20px] lg:mb-[20px] xl:mb-[25px] xl:ml-[40px] border-[#C3BCC3]"
               ></div>
-              <ul class="text-lg">
-                <li>X(TWITTER)</li>
-                <li>FACEBOOK</li>
-                <li>LINKEDIN</li>
+              <ul class="text-[8px] sm:text-base md:text-base lg:text-base xl:text-lg xl:ml-[40px]">
+                <a href="https://twitter.com/gdsciiitkalyani?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><li class="hover:text-gray-300 hover:cursor-pointer hover:scale-105 hover:duration-150">X(TWITTER)</li></a>
+                <li class="hover:text-gray-300 hover:cursor-pointer hover:scale-110 hover:duration-150">INSTAGRAM</li>
+                <li class="hover:text-gray-300 hover:cursor-pointer hover:scale-110 hover:duration-150">DISCORD</li>
               </ul>
             </div>
           </div>
 
-          <div class="div-side3 flex-5 p-[10px] m-[5px]">
-            <h1 class="text-3xl font-bold mt-[50px] mb-[3%]">FOLLOW</h1>
-            <div class="border-b-2 border-dashed w-[140px] mb-[25px]"></div>
-            <ul class="text-lg">
-              <li>X(TWITTER)</li>
-              <li>FACEBOOK</li>
-              <li>LINKEDIN</li>
+          <div class="div-side3 flex-5 xl:p-[30px] ml-[12px] xl:m-[5px]">
+            <h1 class="text-[14px] min-[540]:ml-[70px] sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl font-bold mt-[10px] sm:mt-[35px] md:mt-[50px] lg:mt-[50px] xl:mt-[50px] sm:mb-[5px] md:mb-[10px] lg:mb-[10px] xl:mb-[3%]">FOLLOW</h1>
+            <div class="xl:border-b-2 border-b-[1px] border-dashed w-[60px] sm:w-[100px] md:w-[100px] lg:w-[100px] xl:w-[140px] mb-[5px] sm:mb-[10px] md:mb-[20px] lg:mb-[20px] xl:mb-[25px] border-[#C3BCC3]"></div>
+            <ul class="text-[8px] sm:text-base md:text-base lg:text-base xl:text-lg">
+              <li class="hover:text-gray-300 hover:cursor-pointer hover:scale-105 hover:duration-150">X(TWITTER)</li>
+              <li class="hover:text-gray-300 hover:cursor-pointer hover:scale-105 hover:duration-150">INSTAGRAM</li>
+              <li class="hover:text-gray-300 hover:cursor-pointer hover:scale-105 hover:duration-150">DISCORD</li>
             </ul>
           </div>
         </div>
 
         <img
           class="image"
-          src="assets/Line28.svg"
+          src="{{ url_for('static', filename='assets/Line28.svg') }}"
           alt="Your Image"
         />
       </div>
-    </section> 
+    </section>
 
 
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 </html>
