@@ -119,4 +119,4 @@ This Code of Conduct is based on the [original Hacktoberfest Code of Conduct](ht
 
 
 
-# GDSC IIIT Kalyani Hacktoberfest Code of Conduct
+ GDSC IIIT Kalyani Hacktoberfest Code of Conduct
