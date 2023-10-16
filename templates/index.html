@@ -177,8 +177,8 @@
        </div>
 
 
-       {% for x in data['records'] %}
        <div class="flex flex-col w-1/2 m-auto xs_lead:w-[60%] ">
+        {% for x in data['records'] %}
         <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
             <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#{{ x.rank }}</div>
             <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
