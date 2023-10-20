@@ -64,7 +64,7 @@
     <div class="450tk:w-[20rem] 640tk:w-[26rem]   sm:w-[30rem]  md:w-[35rem] lg:w-[40rem]  xl:w-[50rem] ">
        <img   src="{{ url_for('static', filename='assets/hacktoberlogo.svg') }}" alt="">
     </div>
-    <div class=" 450tk:w-[20rem] 640tk:w-[26rem]   sm:w-[30rem] md:w-[35rem]  lg:w-[40rem] xl:w-[50rem] ">
+    <div class="w-[20rem] m:w-[30rem] md:w-[35rem]  lg:w-[40rem] xl:w-[50rem] ">
        <img   src="{{ url_for('static', filename='assets/gdsclogo.svg') }}" alt="">
     </div>
     <h1 class="640tk:text-lg text-center   md:text-3xl text-[#ABB3C0]">In Collaboration With</h1>
@@ -81,7 +81,7 @@
      
      <!-- collborators -->
      <div class="relative flex overflow-x-hidden mt-10">
-       <div class="py-12 animate-marquee3 whitespace-nowrap">
+       <div class="py-6 animate-marquee3 whitespace-nowrap">
           <div class=" inline-block  h-[8rem] w-[20rem] mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
           </div>
           <div class=" inline-block h-[8rem] w-[20rem]  mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
@@ -94,7 +94,7 @@
        </div>
       
      
-       <div class="absolute top-0 py-12 animate-marquee4 whitespace-nowrap">
+       <div class="absolute top-0 py-6 animate-marquee4 whitespace-nowrap">
           <div class=" inline-block  h-[8rem] w-[20rem]  mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
           </div>
           <div class=" inline-block h-[8rem] w-[20rem]  mx-4 rounded-tr-3xl rounded-md bg-[#0F0913] border-2 border-yellow-500 shadow-lg shadow-yellow-500">
@@ -107,7 +107,7 @@
      </div>
       <!-- marquee effect -->
     
-     <div class="relative flex overflow-x-hidden mt-10">
+     <div class="relative flex overflow-x-hidden mt-10 md:mt-20">
        <div class="py-12 animate-marquee whitespace-nowrap">
          <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
           <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
@@ -182,9 +182,9 @@
             <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#{{ x.rank }}</div>
             <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
             <a href="{{ x.profilepage }}">
-                  <img src="{{ url_for('static', filename='assets/Line 36.svg') }}"class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="Profile picture">
+                  <img src="{{ url_for('static', filename='assets/Line 36.svg') }}"class="min-w-[250px] md:min-w-[300px]" alt="Profile picture">
                   <div class="text-sm sm:text-xl xl:text-2xl 2xl:text-3xl tracking-wider relative pb-2 left-[40%] bottom-[75%] xl_lead:bottom-[58%] xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[30%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">{{ x.username }}</div>
-                 <div class="h-[84px] w-[86px] relative outline-[#FFFFFF] outline outline-[3px] border-[#0F0913] border-8 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "><img src="{{ x.profileLink }}"></div>
+                 <div class="h-[84px] w-[86px] relative outline-[#FFFFFF] outline outline-[3px] border-[#0F0913] border-8 bottom-[162px] left-[72px] xs_lead:h-[50px] xs_lead:w-[50px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "><img src="{{ x.profileLink }}"></div>
                 </a>
               </div>
             <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">{{ x.points }}</div>
@@ -273,7 +273,7 @@
 
         <!-- Column 1 -->
         <div class="my-3 px-3  w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-          <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-lg shadow-[#F9CB33]">
+          <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-xl shadow-[#F9CB33]">
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16  lg:w-20 lg:h-20 mr-3 inline-flex items-center justify-center  text-white flex-shrink-0">
@@ -299,7 +299,7 @@
         <!-- Column 2 -->
         <div class="my-3 px-3  w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
 
-             <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-lg shadow-[#F9CB33] ">
+             <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-md shadow-[#F9CB33] ">
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16 mr-3 lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
@@ -321,7 +321,7 @@
         <!-- column -3 -->
        <div class="my-3 px-3 md:w-1/2 w-full  lg:my-4 lg:px-4 lg:w-1/3">
 
-             <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-lg shadow-[#F9CB33] ">
+             <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-md shadow-[#F9CB33] ">
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16 mr-3  lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
@@ -343,7 +343,7 @@
       <!-- column-4 -->
        <div class="my-3 px-3  md:w-1/2  w-full lg:my-4 lg:px-4 lg:w-1/3">
 
-             <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-lg shadow-[#F9CB33] ">
+             <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-md shadow-[#F9CB33] ">
              <div class="flex items-center mb-3">
                  <div
                     class="w-16 h-16 mr-3 lg:w-20 lg:h-20  inline-flex items-center justify-center  text-white flex-shrink-0">
@@ -365,7 +365,7 @@
          <!-- column-5 -->
        <div class="my-3 px-3  md:w-1/2  w-full lg:my-4 lg:px-4 lg:w-1/3">
 
-        <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-lg shadow-[#F9CB33] ">
+        <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-md shadow-[#F9CB33] ">
         <div class="flex items-center mb-3">
             <div
                class="w-16 h-16 mr-3  lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
@@ -387,7 +387,7 @@
     <!-- column-6 -->
     <div class="my-3 px-3 md:w-1/2 w-full lg:my-4 lg:px-4 lg:w-1/3">
 
-        <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-lg shadow-[#F9CB33] ">
+        <div class="flex rounded-3xl     p-8 flex-col border-[#F9CB33] border-2 shadow-md shadow-[#F9CB33] ">
         <div class="flex items-center mb-3">
             <div
                class="w-16 h-16 mr-3 lg:w-20 lg:h-20 inline-flex items-center justify-center  text-white flex-shrink-0">
