@@ -8,3 +8,5 @@ include/
 pyvenv.cfg
 Scripts/
 .vercel
+static/css/output.css
+__pycache__/app.cpython-311.pyc
