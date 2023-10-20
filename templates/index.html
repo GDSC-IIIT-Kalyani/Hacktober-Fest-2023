@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,16 +26,15 @@
              </svg>
          </button>
        </div>
-         <div class="hidden md:flex basis-1/2 items-center space-x-1">
-           
-  
-           <div class="  md:w-[35rem]    lg:w-[49rem] relative">
-           <img src="{{ url_for('static', filename='assets/navrect.svg') }}" alt="">
-           <div class="absolute bottom-0 px-4 py-3 lg:pb-5 md:pb-3 w-full">
-             <a  class="text-white  md:text-2xl  md:px-3             lg:px-5  lg:text-3xl "  href="#">About</a>
-             <a  class="text-white  md:text-2xl  md:px-3            lg:px-5 lg:text-3xl"    href="#">Leaderboard</a>
-             <a  class="text-white  md:text-2xl  md:px-3           lg:px-5  lg:text-3xl"    href="#">Projects</a>
-             <a  class="text-white  md:text-2xl  md:px-3            lg:px-5   lg:text-3xl"   href="#">Faq</a>
+         <div class="hidden md:flex items-center space-x-1">
+           <div class="relative">
+           <img src="{{ url_for('static', filename='assets/navrect.svg') }}" alt="" class="w-[150%]">
+           <div class="absolute left-[20%] bottom-4 px-4 py-3 lg:pb-5 md:pb-3 w-full">
+             <a  class="text-white  md:text-2xl  md:px-3 lg:px-5  lg:text-3xl"  href="#">Home</a>
+             <a  class="text-white  md:text-2xl  md:px-3 lg:px-5  lg:text-3xl"  href="#">About</a>
+             <a  class="text-white  md:text-2xl  md:px-3 lg:px-5 lg:text-3xl"    href="#">Leaderboard</a>
+             <a  class="text-white  md:text-2xl  md:px-3 lg:px-5  lg:text-3xl"    href="#">Projects</a>
+             <a  class="text-white  md:text-2xl  md:px-3 lg:px-5   lg:text-3xl"   href="#">Faq</a>
           </div>
  </div>
          </div>
@@ -60,7 +59,7 @@
  </section>
  <!-- Landing Page -->
  
- <section class="landing-page  mt-16 640tk:mx-2 ">
+ <section class="landing-page  mt-16 640tk:mx-2 h-screen">
     <div class=" flex flex-col justify-center items-center gap-10">
     <div class="450tk:w-[20rem] 640tk:w-[26rem]   sm:w-[30rem]  md:w-[35rem] lg:w-[40rem]  xl:w-[50rem] ">
        <img   src="{{ url_for('static', filename='assets/hacktoberlogo.svg') }}" alt="">
@@ -110,15 +109,15 @@
     
      <div class="relative flex overflow-x-hidden mt-10">
        <div class="py-12 animate-marquee whitespace-nowrap">
-         <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
-          <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
-         <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">LAUNCH SEQUENCE INITIATED//</span>
+         <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
+          <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
+         <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">LAUNCH SEQUENCE INITIATED//</span>
        </div>
      
        <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
-          <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
-           <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
-           <span class="text-5xl text-[#FFFFFF] mx-4 font-bold bg-gradient-to-br from-[#00000000] via-[#a59e9e] to-[#e3e3e3] text-transparent bg-clip-text animate-gradient">LAUNCH SEQUENCE INITIATED//</span>
+          <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">GET IN THE REPO, HACKERS! //</span>
+           <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">IT’S TIME TO HACK //</span>
+           <span class="text-5xl text-[#bebebe] mx-4 font-bold bg-clip-text animate-gradient">LAUNCH SEQUENCE INITIATED//</span>
        
        </div>
      </div>
@@ -182,10 +181,12 @@
         <div class="flex justify-center  gap-10 xs_lead:gap-5  border-b-2 border-dashed border-[#FFFFFF]">
             <div class="text-4xl xs_lead:text-[16px] sm_lead:text-lg md_lead:text-xl  font-bold relative top-[65px] left-0 xs_lead:top-[30px] " >#{{ x.rank }}</div>
             <div class="w-[70%] h-[80px]  mr-12 mb-6 xs_lead:-mb-10 mt-16 sm_lead:-mb-8 md_lead:-mb-6 xl_lead:-mb-1 xl_lead:mt-20 md_lead:mt-14 sm_lead:mt-12 xs:mt-10">
-                <img src="{{ url_for('static', filename='assets/Line 36.svg') }}"class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="Profile picture">
-                <div class="text-4xl  tracking-wider relative pb-2 left-1/2 bottom-[75%] xs_lead:text-lg  xl_lead:bottom-[58%] xl_lead:text-3xl xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[42%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">{{ x.username }}</div>
-               <div class="h-[84px] w-[86px] relative bg-[#D9D9D9] shadow-custom1 xs_lead:shadow-custom2 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "><img src="{{ x.profileLink }}"></div>
-            </div>
+            <a href="{{ x.profilepage }}">
+                  <img src="{{ url_for('static', filename='assets/Line 36.svg') }}"class="xs_lead:w-[208px] xl_lead:min-w-[400px] md_lead:min-w-[300px] sm_lead:min-w-[270px] xs_lead:min-w-[210px] " alt="Profile picture">
+                  <div class="text-sm sm:text-xl xl:text-2xl 2xl:text-3xl tracking-wider relative pb-2 left-[40%] bottom-[75%] xl_lead:bottom-[58%] xl_lead:pb-2 md_lead:text-2xl sm_lead:text-xl md_lead:bottom-[30%] sm_lead:bottom-[40%] xs_lead:bottom-[30%] xs_lead:left-[80px] xs_lead:pr-1">{{ x.username }}</div>
+                 <div class="h-[84px] w-[86px] relative outline-[#FFFFFF] outline outline-[3px] border-[#0F0913] border-8 bottom-[162px] left-[72px] xs_lead:h-[26px] xs_lead:w-[25px] xs_lead:-top-[75px] xs_lead:left-6 sm_lead:h-11 sm_lead:w-[43px] sm_lead:bottom-[95px] sm+lead:left-10 md_lead:h-12 md_lead:w-[47px] md_lead:bottom-[110px] md_lead:left-12 "><img src="{{ x.profileLink }}"></div>
+                </a>
+              </div>
             <div class="text-4xl xs_lead:text-[16px] text-[#AD832D] font-bold relative top-[60px] md_lead:ml-6 md_lead:text-xl sm_lead:text-lg xs_lead:ml-6 xs_lead:top-[30px]">{{ x.points }}</div>
             
         </div>
