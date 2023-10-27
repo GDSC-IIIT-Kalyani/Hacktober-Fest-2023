@@ -1,13 +1,14 @@
 function faq() {
-  var arrows = document.querySelectorAll('.arrow');
+  var quess = document.querySelectorAll('.ques');
+  var questions = document.querySelectorAll('.abc');
   var answers=document.querySelectorAll('.answer')
       for (let answer of answers){
       answer.style.display = 'none';
       }
-  for (let arrow of arrows) {
-    arrow.addEventListener('click', function () {
+  for (let ques of questions) {
+    ques.addEventListener('click', function () {
       
-      var faqContainer = arrow.closest('.faq');
+      var faqContainer = ques.closest('.faq');
       
       var answer = faqContainer.querySelector('.answer');
       
@@ -16,7 +17,7 @@ function faq() {
       } else {
         answer.style.display = 'none';
       }
-      arrow.classList.toggle('rotate180');
+      ques.children[1].children[0].classList.toggle('rotate180');
     });
   }
 }
